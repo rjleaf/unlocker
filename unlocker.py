@@ -377,7 +377,7 @@ def main():
         vmx_debug = joinpath(vmx_path, 'vmware-vmx-debug')
         vmx_stats = joinpath(vmx_path, 'vmware-vmx-stats')
         vmx_version = subprocess.check_output(["vmplayer", "-v"])
-        if vmx_version.startswith('VMware Player 12'):
+        if vmx_version.startswith('VMware Player 12') or vmx_version.startswith('VMware Player 14'):
             vmx_so = True
             vmwarebase = '/usr/lib/vmware/lib/libvmwarebase.so/libvmwarebase.so'
         else:
